@@ -1,5 +1,5 @@
 # L2_Projet_1.0
-3rd university projet
+Projet de jeu linguistique en C
 
 ```
    ___                   _      _                       _       _    _
