@@ -20,9 +20,6 @@ const SDL_Color black = {0,0,0};
 const SDL_Color bleu = {3,46,90};
 
 
-
-
-
        /*               Fonctions
           *
           * logo------------> Page de présentation du programme

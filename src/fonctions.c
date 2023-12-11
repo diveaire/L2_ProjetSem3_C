@@ -11,15 +11,15 @@
 
 
 
-      /*            Fonctions
-         *
-         * randInt----------------> Génère un nb aléatoire entre min et max
-         * affiche_image----------> Affiche une image dans un rectangle
-         * fillChar---------------> Ajoute n espaces à la fin d'une chaine (pour un affichage lisible avec SDL_TTF)
-         * affiche_parametre------> Affiche une chaine dans un rectangle
-         * ClickDansRect----------> Retourne 1 si les coordonnées x,y sont dans le rectangle sinon 0
-         *
-      */
+    /*            Fonctions
+        *
+        * randInt----------------> Génère un nb aléatoire entre min et max
+        * affiche_image----------> Affiche une image dans un rectangle
+        * fillChar---------------> Ajoute n espaces à la fin d'une chaine (pour un affichage lisible avec SDL_TTF)
+        * affiche_parametre------> Affiche une chaine dans un rectangle
+        * ClickDansRect----------> Retourne 1 si les coordonnées x,y sont dans le rectangle sinon 0
+        *
+    */
 
 
 
@@ -30,24 +30,24 @@ int randInt(int rmin, int rmax) {
 }
     //fonction permettant d'afficher une image dans un rectangle
 void affiche_image(SDL_Window * window, SDL_Renderer * renderer, char * link, SDL_Rect * rect){
-	SDL_Surface *surf = IMG_Load(link);
-	SDL_Texture *img = SDL_CreateTextureFromSurface(renderer, surf);
-	SDL_FreeSurface(surf);
-	CHECK_ERROR(SDL_RenderCopy(renderer,img,NULL,rect) != 0,SDL_GetError());
+    SDL_Surface *surf = IMG_Load(link);
+    SDL_Texture *img = SDL_CreateTextureFromSurface(renderer, surf);
+    SDL_FreeSurface(surf);
+    CHECK_ERROR(SDL_RenderCopy(renderer,img,NULL,rect) != 0,SDL_GetError());
 }
     //remplis la chaine de max char
 void fillChar(char *chaine, int max){
-	while (strlen(chaine) < max){
-			strcat(chaine," ");
-	}
+    while (strlen(chaine) < max){
+            strcat(chaine," ");
+    }
 }
-	//Affiche une chaine dans un rectangle
+    //Affiche une chaine dans un rectangle
 void affiche_parametre(SDL_Window * window, SDL_Renderer * renderer, TTF_Font * font, SDL_Color color, char * text, int max, SDL_Rect * rect){
-	fillChar(text,max);
-	SDL_Surface * surface = TTF_RenderText_Solid(font,text, color);
-	SDL_Texture * texte = SDL_CreateTextureFromSurface(renderer, surface);
-	SDL_FreeSurface(surface);
-	CHECK_ERROR(SDL_RenderCopy(renderer,texte,NULL,rect) != 0,SDL_GetError());
+    fillChar(text,max);
+    SDL_Surface * surface = TTF_RenderText_Solid(font,text, color);
+    SDL_Texture * texte = SDL_CreateTextureFromSurface(renderer, surface);
+    SDL_FreeSurface(surface);
+    CHECK_ERROR(SDL_RenderCopy(renderer,texte,NULL,rect) != 0,SDL_GetError());
 }
 
     //Retourne 1 si les coordonnées x,y sont dans le rectangle sinon 0
