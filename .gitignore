@@ -2,7 +2,8 @@
 /.vscode/
 /.idea/
 *.sublime-*
-/images/google-images-download/
+images/google-images-download
+
 # Fichiers temporaires
 *~
 .*.swp
