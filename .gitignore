@@ -1,3 +1,33 @@
-/.DS_Store
+# Dossiers et fichiers de configuration de l'IDE et de l'éditeur
+/.vscode/
 /.idea/
+*.sublime-*
 /images/google-images-download/
+# Fichiers temporaires
+*~
+.*.swp
+.DS_Store
+
+# Dossiers et fichiers spécifiques au système
+/dbg/
+/deps/
+/.DS_Store
+
+# Fichiers de log et de données
+/.fichier_orig
+*.log
+*.csv
+*.csv
+*.tmp
+*.temp
+notes
+
+# Fichiers compilés
+build/
+*.o
+*.so
+*.a
+*.dll
+*.exe
+*.out
+*.app
